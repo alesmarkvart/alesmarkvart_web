@@ -72,6 +72,10 @@ img, svg, video, canvas {
   background: var(--charcoal);
 }
 
+.section-omne {
+  padding-top: 3rem;
+}
+
 /* ============================================================
    NAVIGATION
    ============================================================ */
@@ -668,11 +672,21 @@ img, svg, video, canvas {
   margin-bottom: 0;
 }
 
+.about-avatar {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--gold);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
 .about-stats {
   display: flex;
   flex-direction: column;
   gap: 2.75rem;
-  padding-top: 0.25rem;
 }
 
 .stat {}
@@ -933,8 +947,8 @@ footer p {
   }
 
   .about-stats {
-    flex-direction: row;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-grid {
@@ -976,7 +990,8 @@ footer p {
   .container { padding: 0 1.25rem; }
 
   .about-stats {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
   }
 
