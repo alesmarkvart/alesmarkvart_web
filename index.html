@@ -13,6 +13,25 @@
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
+  <!-- Google Consent Mode v2 + Google tag -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var _c = localStorage.getItem('cookie_consent');
+    gtag('consent', 'default', {
+      ad_storage:         'denied',
+      ad_user_data:       'denied',
+      ad_personalization: 'denied',
+      analytics_storage:  _c === 'granted' ? 'granted' : 'denied',
+      wait_for_update:    500,
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-098R9V98HT"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-098R9V98HT');
+  </script>
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="site.webmanifest">
 
@@ -332,6 +351,63 @@
       <p>© 2025 Designed with 🧡 by Ing. Aleš Markvart, IČO: 17676118 — Gastro konzultant</p>
     </div>
   </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookieBar" class="cookie-bar" role="dialog" aria-label="Souhlas s cookies">
+    <div class="cookie-bar__inner">
+      <p class="cookie-bar__text">
+        Tento web používá cookies pro analýzu návštěvnosti. Technické cookies jsou nezbytné pro fungování webu.
+      </p>
+      <div class="cookie-bar__actions">
+        <button id="cookieSettings" class="cookie-btn cookie-btn--settings">Nastavení</button>
+        <button id="cookieAccept" class="cookie-btn cookie-btn--accept">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div id="cookieModal" class="cookie-modal" aria-hidden="true">
+    <div class="cookie-modal__overlay" id="cookieOverlay"></div>
+    <div class="cookie-modal__box" role="dialog" aria-modal="true" aria-label="Nastavení cookies">
+      <h3 class="cookie-modal__title">Nastavení cookies</h3>
+      <div class="cookie-modal__options">
+
+        <div class="cookie-option">
+          <div class="cookie-option__info">
+            <span class="cookie-option__name">Technické cookies</span>
+            <span class="cookie-option__desc">Nezbytné pro správné fungování webu. Nelze vypnout.</span>
+          </div>
+          <span class="cookie-always-on">Vždy povoleno</span>
+        </div>
+
+        <div class="cookie-option">
+          <div class="cookie-option__info">
+            <span class="cookie-option__name">Analytické cookies</span>
+            <span class="cookie-option__desc">Pomáhají nám pochopit, jak návštěvníci web používají (Google Analytics, anonymizováno).</span>
+          </div>
+          <label class="cookie-toggle">
+            <input type="checkbox" id="toggleAnalytics" checked>
+            <span class="cookie-toggle__track"><span class="cookie-toggle__thumb"></span></span>
+          </label>
+        </div>
+
+        <div class="cookie-option">
+          <div class="cookie-option__info">
+            <span class="cookie-option__name">Marketingové cookies</span>
+            <span class="cookie-option__desc">Slouží k cílené reklamě a měření výkonu kampaní.</span>
+          </div>
+          <label class="cookie-toggle">
+            <input type="checkbox" id="toggleMarketing">
+            <span class="cookie-toggle__track"><span class="cookie-toggle__thumb"></span></span>
+          </label>
+        </div>
+
+      </div>
+      <div class="cookie-modal__actions">
+        <button id="cookieSave" class="cookie-btn cookie-btn--accept">Uložit nastavení</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

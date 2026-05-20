@@ -378,4 +378,60 @@
     btn.textContent = 'Odeslat zprávu';
   }
 
+  // ============================================================
+  // COOKIE CONSENT
+  // ============================================================
+  var cookieBar      = document.getElementById('cookieBar');
+  var cookieAccept   = document.getElementById('cookieAccept');
+  var cookieSettings = document.getElementById('cookieSettings');
+  var cookieModal    = document.getElementById('cookieModal');
+  var cookieOverlay  = document.getElementById('cookieOverlay');
+  var cookieSave     = document.getElementById('cookieSave');
+  var toggleAnalytics = document.getElementById('toggleAnalytics');
+  var toggleMarketing = document.getElementById('toggleMarketing');
+
+  function hideBoth() {
+    cookieBar.classList.remove('visible');
+    closeModal();
+  }
+
+  function openModal() {
+    cookieModal.classList.add('open');
+    cookieModal.removeAttribute('aria-hidden');
+  }
+
+  function closeModal() {
+    cookieModal.classList.remove('open');
+    cookieModal.setAttribute('aria-hidden', 'true');
+  }
+
+  function applyConsent(analytics, marketing) {
+    localStorage.setItem('cookie_consent', 'granted');
+    localStorage.setItem('cookie_analytics', analytics ? 'granted' : 'denied');
+    localStorage.setItem('cookie_marketing', marketing ? 'granted' : 'denied');
+    gtag('consent', 'update', {
+      analytics_storage:  analytics ? 'granted' : 'denied',
+      ad_storage:         marketing ? 'granted' : 'denied',
+      ad_user_data:       marketing ? 'granted' : 'denied',
+      ad_personalization: marketing ? 'granted' : 'denied',
+    });
+  }
+
+  if (cookieBar && !localStorage.getItem('cookie_consent')) {
+    setTimeout(function () { cookieBar.classList.add('visible'); }, 1000);
+
+    cookieAccept.addEventListener('click', function () {
+      applyConsent(true, false);
+      hideBoth();
+    });
+
+    cookieSettings.addEventListener('click', openModal);
+    cookieOverlay.addEventListener('click', closeModal);
+
+    cookieSave.addEventListener('click', function () {
+      applyConsent(toggleAnalytics.checked, toggleMarketing.checked);
+      hideBoth();
+    });
+  }
+
 })();
