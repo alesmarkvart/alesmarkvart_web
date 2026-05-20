@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleš Markvart — Gastro konzultant & Mystery shopper</title>
+  <meta name="description" content="Gastro konzultant a Mystery shopper. Zvýšení tržeb, kontrola personálu, POS systémy Dotykačka, školení. Praha a okolí.">
+
+  <meta property="og:title" content="Aleš Markvart — Gastro konzultant & Mystery shopper">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alesmarkvart.cz">
+  <meta property="og:description" content="Gastro konzultant a Mystery shopper. Zvýšení tržeb, kontrola personálu, POS systémy.">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AM</a>
+      <ul class="nav-links">
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#omne">O mně</a></li>
+        <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#sluzby" class="mobile-link">Služby</a></li>
+        <li><a href="#omne" class="mobile-link">O mně</a></li>
+        <li><a href="#kontakt" class="mobile-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Left column: all text -->
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">gastro konzultant</div>
+      <h1 class="hero-title">
+        <span class="title-line reveal-up delay-1">ALEŠ</span>
+        <span class="title-line reveal-up delay-2">MARKVART</span>
+      </h1>
+      <div class="hero-subtitle reveal-up delay-3">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-perex reveal-up delay-4">
+        Máte plný talíř. Personál, provoz, tržby a systémy — a přitom musíte zvládat i roli hostitele. Jsem tu, aby vaše restaurace konečně fungovala, jak má.
+      </p>
+      <a href="mailto:me@alesmarkvart.cz" class="cta-btn reveal-up delay-5">
+        Mám zájem o konzultaci
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Right column: photo, bottom-anchored -->
+    <div class="hero-photo reveal-photo">
+      <img src="img/ales-markvart.png" alt="Ing. Aleš Markvart — Gastro konzultant & Mystery shopper">
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Služby -->
+  <section id="sluzby" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">speciality</span>
+        <h2 class="section-title">Moje <span class="gold">MENU</span></h2>
+      </div>
+      <div class="menu-courses">
+
+        <!-- 01 Předkrm -->
+        <div class="course fade-course">
+          <div class="course-header">
+            <span class="course-rule"></span>
+            <span class="course-label-text">předkrm</span>
+            <span class="course-rule"></span>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-num">01</span>
+              <div class="course-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 5v3M16 24v3M5 16h3M24 16h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Mystery shopping</h3>
+              <p>Společně vytvoříme strukturu mystery shoppingu, kterou si odsouhlasíme. Následně provedu návštěvy a vyhodnotím sesbíraná data do kompletního reportu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-ornament fade-course-sep" aria-hidden="true">✦</div>
+
+        <!-- 02 Polévka -->
+        <div class="course fade-course">
+          <div class="course-header">
+            <span class="course-rule"></span>
+            <span class="course-label-text">polévka</span>
+            <span class="course-rule"></span>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-num">02</span>
+              <div class="course-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <path d="M4 8h24M4 16h24M4 24h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="26" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M24.5 24h3M26 22.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Gastro & IT konzultace</h3>
+              <p>Zaměříme se na provoz podniku s jasným cílem — zvýšit tržby, snížit náklady, upravit menu a přitom nenarušit chod celého podniku.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-ornament fade-course-sep" aria-hidden="true">✦</div>
+
+        <!-- 03 Hlavní chod -->
+        <div class="course fade-course">
+          <div class="course-header">
+            <span class="course-rule"></span>
+            <span class="course-label-text">hlavní chod</span>
+            <span class="course-rule"></span>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-num">03</span>
+              <div class="course-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <rect x="4" y="8" width="24" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M10 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M9 16h2M15 16h2M21 16h2M9 21h2M15 21h2M21 21h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Expertíza POS Dotykačka</h3>
+              <p>Zavedení největšího POS systému Dotykačka se vším všudy včetně procesů. Transformace z jiného POS včetně přesunu dat nebo nová instalace včetně proškolení personálu a managementu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-ornament fade-course-sep" aria-hidden="true">✦</div>
+
+        <!-- 04 Příloha -->
+        <div class="course fade-course">
+          <div class="course-header">
+            <span class="course-rule"></span>
+            <span class="course-label-text">příloha</span>
+            <span class="course-rule"></span>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-num">04</span>
+              <div class="course-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <circle cx="12" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="22" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M4 27c0-4.418 3.582-8 8-8h1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M20 19h8M24 15v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Školení personálu & HeadHunting</h3>
+              <p>Chcete se zaměřit na up-sell nebo zavést nový pokladní systém? Vyhledávám a nabírám pracovníky do servisu, když potřebujete kvalitní lidi.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-ornament fade-course-sep" aria-hidden="true">✦</div>
+
+        <!-- 05 Dezert -->
+        <div class="course fade-course">
+          <div class="course-header">
+            <span class="course-rule"></span>
+            <span class="course-label-text">dezert</span>
+            <span class="course-rule"></span>
+          </div>
+          <div class="course-body">
+            <div class="course-meta">
+              <span class="course-num">05</span>
+              <div class="course-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <rect x="3" y="5" width="26" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M3 10h26" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="7.5" cy="7.5" r="1" fill="currentColor"/>
+                  <circle cx="11.5" cy="7.5" r="1" fill="currentColor"/>
+                  <circle cx="15.5" cy="7.5" r="1" fill="currentColor"/>
+                  <path d="M9 17l3 3-3 3M14 20h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="course-info">
+              <h3>Tvorba gastro webů</h3>
+              <p>Navrhuji weby na míru pro restaurace, kavárny a bary. Online menu, rezervace, napojení na POS — vše přehledně a s důrazem na zákaznický zážitek a tržby.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- O mně -->
+  <section id="omne" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">profil</span>
+        <h2 class="section-title">Ing. <span class="gold">Aleš Markvart</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>Jsem profesionál v gastro IT světě se zaměřením na zákaznickou zkušenost hostů. Mám zkušenosti s prací jako barman, číšník i kuchař a později jsem týmy vedl jako provozní manažer nebo hlavní barman. Jsem gastročlověk, který ví, jak to chodí.</p>
+          <p>Mojí vášní byl vždy svět IT, který může pomoci s ještě lepší zákaznickou zkušeností ve vašem podniku. Umím se pohybovat v pokladních systémech a hledat správná data, najít mezery a potenciál zvýšení tržeb.</p>
+          <p>Pracoval jsem například jako manažer digitálních služeb pro MAKRO, vedl restaurace Yam Yam, marketingové projekty pro Gare Restaurants a proškolil jsem týmy více než 100 gastro provozů.</p>
+          <p>Pohybuji se jako konzultant a školitel v gastro provozech v Praze a okolí — restaurace, hospody, kavárny, bary, bistra.</p>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">proškolených provozů</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">let v gastru</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Praha</span>
+            <span class="stat-label">a okolí</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="section section-dark">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left fade-in">
+          <div class="section-header">
+            <span class="section-tag">kontaktní formulář</span>
+            <h2 class="section-title">Napište <span class="gold">mi</span></h2>
+          </div>
+          <p class="contact-perex">Neváhejte mi napsat nebo zavolat — konzultace je zdarma.</p>
+          <div class="contact-details">
+            <a href="tel:+420728725484" class="contact-inline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              728 725 484
+            </a>
+            <a href="mailto:me@alesmarkvart.cz" class="contact-inline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="m2 7 10 7 10-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              me@alesmarkvart.cz
+            </a>
+            <a href="https://www.linkedin.com/in/alesmarkvart/" target="_blank" rel="noopener noreferrer" class="contact-inline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M7 10v7M7 7v.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M11 17v-3.5a2.5 2.5 0 0 1 5 0V17M11 10v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <form class="contact-form fade-in" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="f-name">Jméno</label>
+            <input type="text" id="f-name" name="Jméno" placeholder="Vaše jméno" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">E-mail</label>
+            <input type="email" id="f-email" name="Email" placeholder="vas@email.cz" required>
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Telefon <span class="form-optional">(nepovinné)</span></label>
+            <input type="tel" id="f-phone" name="Telefon" placeholder="+420 000 000 000">
+          </div>
+          <div class="form-group">
+            <label for="f-message">Zpráva</label>
+            <textarea id="f-message" name="Zpráva" rows="5" placeholder="Popište váš provoz a co byste chtěli řešit…" required></textarea>
+          </div>
+          <button type="submit" class="cta-btn">
+            Odeslat zprávu
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Ing. Aleš Markvart — Gastro konzultant & Mystery shopper</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
