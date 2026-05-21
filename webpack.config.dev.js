@@ -9,12 +9,18 @@ module.exports = merge(common, {
   },
   devServer: {
     liveReload: true,
-    hot: true,
+    hot: false,
     open: true,
-    static: ['./'],
+    static: {
+      directory: './',
+      watch: false,
+    },
     watchFiles: {
       paths: ['*.html', 'css/**/*', 'js/**/*', 'img/**/*'],
-      options: { ignored: /node_modules/ },
+      options: {
+        ignored: /node_modules/,
+        usePolling: false,
+      },
     },
   },
 });
