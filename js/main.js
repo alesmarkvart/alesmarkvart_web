@@ -434,4 +434,16 @@
     });
   }
 
+  // ============================================================
+  // PRICING — prefill contact form
+  // ============================================================
+  document.querySelectorAll('.pricing-cta[data-package]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var msg = document.getElementById('f-message');
+      if (msg) {
+        msg.value = 'Mám zájem o ' + link.dataset.package + '.';
+      }
+    });
+  });
+
 })();
