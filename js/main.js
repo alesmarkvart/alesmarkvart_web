@@ -359,6 +359,9 @@
         var json = await res.json();
 
         if (res.ok) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'form_submit', { event_category: 'contact', event_label: 'contact_form' });
+          }
           contactForm.innerHTML = '<p class="form-success">Zpráva odeslána — ozvu se co nejdříve.</p>';
         } else {
           throw new Error(json.error || 'Chyba při odesílání.');
